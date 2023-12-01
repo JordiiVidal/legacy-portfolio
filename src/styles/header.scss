@@ -1,0 +1,75 @@
+/* Define variables */
+$padding-size: 10px;
+$font-size-base: 18px;
+
+/* Header styling */
+header {
+  padding: $padding-size;
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Grid layout and element positioning */
+nav.grid {
+  display: grid;
+  grid-template-areas: "logo steps settings";
+}
+
+#logo {
+  grid-area: logo;
+  justify-self: start;
+  align-self: center;
+  padding: $padding-size;
+
+  img {
+    width: 45px;
+    height: auto;
+  }
+}
+
+#steps {
+  grid-area: steps;
+  justify-self: end;
+  align-self: center;
+  padding: $padding-size;
+
+  .step {
+    display: inline-block;
+    margin: 0 $padding-size;
+    font-size: $font-size-base;
+    background-color: #ffffffd5;
+
+    border: none;
+    cursor: pointer;
+
+    label {
+      cursor: pointer;
+    }
+  }
+}
+
+#settings {
+  grid-area: settings;
+  justify-self: end;
+  align-self: center;
+
+  button#theme {
+    font-size: $font-size-base;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    img {
+      width: 20px;
+      height: auto;
+    }
+
+    span {
+      padding-left: 5px;
+    }
+  }
+}

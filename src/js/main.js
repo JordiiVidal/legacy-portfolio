@@ -1,4 +1,6 @@
-import { switchThemeButton, initializeTheme } from "./src/theme";
+import '../styles/styles.scss'
+
+import { switchThemeButton, initializeTheme } from "./theme";
 
 function setupSettings() {
     initializeTheme();

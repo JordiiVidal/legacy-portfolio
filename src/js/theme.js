@@ -1,5 +1,5 @@
-import darkIcon from '../assets/icons/dark.svg'
-import lightIcon from '../assets/icons/light.svg'
+import darkIcon from '../../assets/icons/dark.svg'
+import lightIcon from '../../assets/icons/light.svg'
 
 const rootElement = document.documentElement;
 const iconImage = document.getElementById('icon-theme');
