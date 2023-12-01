@@ -1,38 +1,35 @@
 import darkIcon from '../../assets/icons/dark.svg'
 import lightIcon from '../../assets/icons/light.svg'
 
+const DATA_THEME_ATTRIBUTE = 'data-bs-theme';
 const rootElement = document.documentElement;
 const iconImage = document.getElementById('icon-theme');
 const buttonElement = document.getElementById('theme');
 
-const isThemeLight = (theme) => theme === 'light';
+const getPreferredTheme = () => window?.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
 
-function setTheme(theme){
-    if(!iconImage){
-        console.error('Icon element not found');
-    }
+const getCurrentTheme = () => rootElement?.getAttribute(DATA_THEME_ATTRIBUTE) ?? 'light';
 
-    iconImage.src = isThemeLight(theme) ? lightIcon : darkIcon;
-    rootElement.setAttribute('data-theme', theme);
-}
+const getNextTheme = (theme) => theme ? theme : getCurrentTheme() === 'light' ? 'dark' : 'light'; 
 
-export function initializeTheme(){
-    const isPrefersUseDarkTheme = window?.matchMedia('(prefers-color-scheme: dark)').matches;
-    const initialTheme = isPrefersUseDarkTheme ? 'dark' : 'light';
-    setTheme(initialTheme);
-}
+export const initializeTheme = () => setTheme(getPreferredTheme());
 
 export function switchThemeButton(){
     if (!buttonElement || !iconImage) {
         console.error('Button or icon element not found.');
         return;
     }
-
-    const themeSwitchHandle = () => {
-        const currentTheme = rootElement.getAttribute('data-theme');
-        const newTheme = isThemeLight(currentTheme) ? 'dark' : 'light';
-        setTheme(newTheme);
-    };
+    
+    const themeSwitchHandle = () => setGlobalTheme(getNextTheme());
     
     buttonElement.addEventListener('click', themeSwitchHandle);
+}
+
+function setGlobalTheme(theme){
+    if(!iconImage || !rootElement){
+        console.error('Icon or Root element not found');
+    }
+
+    iconImage.src = theme === 'light' ? lightIcon : darkIcon;
+    rootElement.setAttribute(DATA_THEME_ATTRIBUTE, theme);
 }

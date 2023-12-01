@@ -3,7 +3,7 @@ import '../styles/styles.scss'
 import { switchThemeButton, initializeTheme } from "./theme";
 
 function setupSettings() {
-    initializeTheme();
+    initializeTheme;
     switchThemeButton();
 }
 
