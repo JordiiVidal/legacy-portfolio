@@ -2,6 +2,14 @@ html {
   box-sizing: border-box;
 }
 
+html[data-theme="light"] {
+  background-color: rgb(245, 234, 234);
+}
+
+html[data-theme="dark"] {
+  background-color: rgb(38, 37, 37);
+}
+
 body {
   margin: 0rem auto;
   padding: 0rem;

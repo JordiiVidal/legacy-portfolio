@@ -4,7 +4,7 @@ header {
 
 nav.grid {
   display: grid;
-  grid-template-areas: "logo steps tools";
+  grid-template-areas: "logo steps settings";
 }
 
 #logo {
@@ -22,18 +22,21 @@ nav.grid {
 .step {
   display: inline-block;
   padding: 0.5rem 0.8rem;
-  margin: 0 0.5rem;
+  margin: 0 0.3rem;
   border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 1rem;
 }
 
-#tools {
-  grid-area: tools;
+#settings {
+  grid-area: settings;
   justify-self: end;
   align-self: center;
 }
 
-.tool {
-  display: inline-block;
+#theme {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
