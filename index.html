@@ -1,13 +1,64 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/main.js"></script>
-  </body>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" type="text/css" href="./assets/styles/layout.css" />
+  <link rel="stylesheet" type="text/css" href="./assets/styles/header.css" />
+
+  <title>My Portfolio | Jordi Vidal Roselló</title>
+</head>
+
+<body>
+  <header>
+    <nav class="grid">
+      <div id="logo" grid-area="logo">
+        <img src="/vite.svg">
+      </div>
+
+      <div id="steps" grid-area="steps">
+        <div class="step" id="home">
+          <label>Home</label>
+        </div>
+
+        <div class="step" id="about-me">
+          <label>About</label>
+        </div>
+
+        <div class="step" id="projects">
+          <label>Projects</label>
+        </div>
+
+        <div class="step" id="contact">
+          <label>Contact</label>
+        </div>
+      </div>
+
+      <div id="tools" grid-area="tools">
+        <div class="tool" id="lenguage">
+          <img src="icons/globe.svg">
+        </div>
+        <div class="tool" id="theme">
+          <img src="icons/moon.svg">
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <article>
+      <h3 class="subtitle">Jordi Vidal Roselló</h3>
+      <h1 class="title">Full Stack Developer</h1>
+    </article>
+  </main>
+
+  <footer>
+
+  </footer>
+  <script type="module" src="main.js"></script>
+</body>
+
 </html>
