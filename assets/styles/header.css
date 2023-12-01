@@ -21,11 +21,6 @@ nav.grid {
 
 .step {
   display: inline-block;
-  padding: 0.5rem 0.8rem;
-  margin: 0 0.3rem;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 1rem;
 }
 
 #settings {

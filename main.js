@@ -1,9 +1,7 @@
 import { switchThemeButton } from "./src/theme";
 
-const themeButton = document.getElementById('theme');
-
 function setupSettings() {
-    switchThemeButton(themeButton);
+    switchThemeButton();
 }
 
 (function run(){
