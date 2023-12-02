@@ -12,7 +12,7 @@ const getCurrentTheme = () => rootElement?.getAttribute(DATA_THEME_ATTRIBUTE) ??
 
 const getNextTheme = (theme) => theme ? theme : getCurrentTheme() === 'light' ? 'dark' : 'light'; 
 
-export const initializeTheme = () => setTheme(getPreferredTheme());
+export const initializeTheme = () => setGlobalTheme(getPreferredTheme());
 
 export function switchThemeButton(){
     if (!buttonElement || !iconImage) {

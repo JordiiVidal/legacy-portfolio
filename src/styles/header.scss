@@ -1,17 +1,20 @@
 /* Define variables */
-$padding-size: 10px;
+$padding-size: 8px;
 $font-size-base: 18px;
 
 /* Header styling */
 header {
   padding: $padding-size;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  opacity: 1;
+  visibility: inherit;
+  backdrop-filter: blur(10px);
 }
 
 /* Grid layout and element positioning */
-nav.grid {
+nav {
   display: grid;
   grid-template-areas: "logo steps settings";
+  padding: 0 $padding-size;
 }
 
 #logo {
@@ -21,14 +24,14 @@ nav.grid {
   padding: $padding-size;
 
   img {
-    width: 45px;
+    width: 30px;
     height: auto;
   }
 }
 
 #steps {
   grid-area: steps;
-  justify-self: end;
+  justify-self: center;
   align-self: center;
   padding: $padding-size;
 

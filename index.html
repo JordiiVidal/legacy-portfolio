@@ -7,16 +7,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <link rel="stylesheet" type="text/css" href="./src/styles/styles.scss" />
-  <link rel="stylesheet" type="text/css" href="./src/styles/header.scss" />
 
   <title>My Portfolio | Jordi Vidal Roselló</title>
 </head>
 
 <body>
-  <header>
-    <nav class="grid">
+  <header class="sticky-top">
+    <nav class="container">
       <div id="logo" grid-area="logo">
         <img src="/vite.svg">
+        <label class="text-uppercase">Vidiic</label>
       </div>
 
       <div id="steps" grid-area="steps">
@@ -40,22 +40,64 @@
       <div id="settings" grid-area="settings">
         <button class="button" id="theme">
           <img id="icon-theme" src="./assets/icons/light.svg">
-          <span>Theme</span>
         </button>
       </div>
     </nav>
   </header>
 
-  <main class="container-fluid">
+  <main class="container">
     <article>
-      <h3 class="subtitle">Jordi Vidal Roselló</h3>
-      <h1 class="title">Full Stack Developer</h1>
+      <div class="text-center py-5">
+        <p class="lead mb-2 text-uppercase">Jordi Vidal Roselló</p>
+        <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Full Stack Developer</h1>
+        <p class="my-3 px-5 lead">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt impedit, culpa quaerat vero sit est
+          distinctio velit alias numquam commodi suscipit, quidem explicabo illum sequi reprehenderit. Porro veritatis
+          aliquam quod!
+        </p>
+        <ul class="nav mx-n4 my-4 d-flex justify-content-center">
+          <li class="nav-item">
+            <a href="#" class="nav-link text-lg text-muted text-primary-hover" style="padding-left: 2px;">
+              <i class="bi bi-twitter"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link text-lg text-muted text-primary-hover">
+              <i class="bi bi-linkedin"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link text-lg text-muted text-primary-hover">
+              <i class="bi bi-github"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link text-lg text-muted text-primary-hover">
+              <i class="bi bi-envelope-fill"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link text-lg text-muted text-primary-hover">
+              <i class="bi bi-telephone-fill"></i>
+            </a>
+          </li>
+        </ul>
+        <div class="d-grid gap-3 d-flex justify-content-center">
+          <button type="button" class="btn btn-primary px-4">Resume</button>
+          <button type="button" class="btn btn-outline-secondary px-4">Contact Me</button>
+        </div>
+      </div>
     </article>
   </main>
 
   <footer>
+    <div class="bd-footer py-4 py-md-5 mt-5 bg-body-tertiary">
+      <div class="container py-4 py-md-5 px-4 px-md-3 text-body-secondary">
 
+      </div>
+    </div>
   </footer>
+
   <script type="module" src="./src/js/main.js"></script>
 </body>
 
