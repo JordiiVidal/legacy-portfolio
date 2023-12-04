@@ -3,16 +3,18 @@
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Jordi Vidal Roselló">
+  <meta name="description" content="Portfolio">
+  <title>Jordi Vidal Roselló</title>
 
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <link rel="stylesheet" type="text/css" href="./src/styles/styles.scss" />
-
-  <title>My Portfolio | Jordi Vidal Roselló</title>
 </head>
 
 <body>
-  <header class="sticky-top">
+
+  <header>
     <nav class="container">
       <div id="logo" grid-area="logo">
         <img src="/vite.svg">
@@ -46,48 +48,50 @@
   </header>
 
   <main class="container">
-    <article>
-      <div class="text-center py-5">
-        <p class="lead mb-2 text-uppercase">Jordi Vidal Roselló</p>
-        <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Full Stack Developer</h1>
-        <p class="my-3 px-5 lead">
+    <section>
+      <div class="section-header">
+        <span class="text-primary">Jordi Vidal Roselló</span>
+        <h1>Full Stack Developer</h1>
+        <p>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt impedit, culpa quaerat vero sit est
           distinctio velit alias numquam commodi suscipit, quidem explicabo illum sequi reprehenderit. Porro veritatis
           aliquam quod!
         </p>
-        <ul class="nav mx-n4 my-4 d-flex justify-content-center">
-          <li class="nav-item">
-            <a href="#" class="nav-link text-lg text-muted text-primary-hover" style="padding-left: 2px;">
-              <i class="bi bi-twitter"></i>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link text-lg text-muted text-primary-hover">
-              <i class="bi bi-linkedin"></i>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link text-lg text-muted text-primary-hover">
-              <i class="bi bi-github"></i>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link text-lg text-muted text-primary-hover">
-              <i class="bi bi-envelope-fill"></i>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link text-lg text-muted text-primary-hover">
-              <i class="bi bi-telephone-fill"></i>
-            </a>
-          </li>
-        </ul>
-        <div class="d-grid gap-3 d-flex justify-content-center">
-          <button type="button" class="btn btn-primary px-4">Resume</button>
-          <button type="button" class="btn btn-outline-secondary px-4">Contact Me</button>
+      </div>
+      <div class="gap-3 d-flex justify-content-center">
+        <button type="button" class="btn btn-primary px-4">Resume</button>
+        <button type="button" class="btn btn-outline-secondary px-4">Contact Me</button>
+      </div>
+    </section>
+    <section id="section-about">
+      <div class="section-header">
+        <span class="text-warning">About me</span>
+        <h1>Full Stack Developer</h1>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt impedit, culpa quaerat vero sit est
+          distinctio velit alias numquam commodi suscipit, quidem explicabo illum sequi reprehenderit. Porro veritatis
+          aliquam quod!
+        </p>
+      </div>
+      <div id="grid-about" class="grid">
+        <div class="card">
+          <h3>Front-End</h3>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit eum tempora reprehenderit ipsum.</p>
+        </div>
+        <div class="card">
+          <h3>Angular</h3>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit eum tempora reprehenderit ipsum.</p>
+        </div>
+        <div class="card">
+          <h3>Laravel</h3>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit eum tempora reprehenderit ipsum.</p>
+        </div>
+        <div class="card">
+          <h3>Back-End</h3>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit eum tempora reprehenderit ipsum.</p>
         </div>
       </div>
-    </article>
+    </section>
   </main>
 
   <footer>

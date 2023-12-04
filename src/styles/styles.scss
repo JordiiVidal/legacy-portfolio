@@ -1,6 +1,9 @@
 @import "bootstrap/scss/bootstrap";
 @import "./header.scss";
 
+$letter-spacing-titles: 0.4px;
+$margin-vertically-titles: 20px;
+
 html {
     box-sizing: border-box;
 }
@@ -9,32 +12,71 @@ body {
     margin: 0rem auto;
     padding: 0rem;
     width: 100%;
-    min-height: 100vh;
+    min-height: 100%;
+    height: 159vh;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    margin: 0;
+section {
+    padding: 120px 0 140px;
+
+    .section-header {
+        text-align: center;
+
+        span {
+            display: block;
+            font-weight: 700;
+            font-size: 16px;
+            letter-spacing: $letter-spacing-titles;
+            text-transform: uppercase;
+            margin-bottom: $margin-vertically-titles;
+        }
+
+        h1 {
+            font-weight: 700;
+            font-size: 60px;
+            letter-spacing: $letter-spacing-titles;
+        }
+
+        p {
+            margin-top: $margin-vertically-titles;
+            font-weight: 300;
+            font-size: 20px;
+            letter-spacing: 0.3px;
+        }
+    }
 }
 
-.title {
-    font-size: 2.4rem;
+.grid {
+    display: grid;
+    gap: 20px;
+
+    &#grid-about {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
-.subtitle {
-    font-size: 1rem;
-    font-weight: 300;
-    text-transform: uppercase;
-}
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    height: 400px;
+    border-radius: 30px;
+    background-image: linear-gradient(to bottom right, #5a1fa1, #b343af);
+    text-align: center;
+    padding: 25px 30px;
 
-.button {
-    padding: 0.5rem 0.8rem;
-    margin: 0 0.3rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1rem;
+    h3 {
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 36px;
+        letter-spacing: 0.2px;
+        margin-bottom: 8px;
+    }
+
+    p {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 26px;
+        letter-spacing: 0.05px;
+    }
 }

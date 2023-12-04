@@ -1,27 +1,38 @@
-/* Define variables */
-$padding-size: 8px;
-$font-size-base: 18px;
+$padding-size-header: 8px;
+$font-size-header: 15px;
+$height-header: 70px;
 
-/* Header styling */
 header {
-  padding: $padding-size;
+  padding: 0 $padding-size-header;
   opacity: 1;
   visibility: inherit;
   backdrop-filter: blur(10px);
+  height: $height-header;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  position: sticky;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &.scroll {
+    box-shadow: 0 1px 0 rgb(168 168 168 / 20%);
+  }
 }
 
-/* Grid layout and element positioning */
 nav {
   display: grid;
   grid-template-areas: "logo steps settings";
-  padding: 0 $padding-size;
+  padding: 0 $padding-size-header;
 }
 
 #logo {
   grid-area: logo;
   justify-self: start;
   align-self: center;
-  padding: $padding-size;
+  padding: $padding-size-header;
 
   img {
     width: 30px;
@@ -33,13 +44,12 @@ nav {
   grid-area: steps;
   justify-self: center;
   align-self: center;
-  padding: $padding-size;
+  padding: $padding-size-header;
 
   .step {
     display: inline-block;
-    margin: 0 $padding-size;
-    font-size: $font-size-base;
-
+    margin: 0 $padding-size-header;
+    font-size: $font-size-header;
     border: none;
     cursor: pointer;
 
@@ -55,7 +65,7 @@ nav {
   align-self: center;
 
   button#theme {
-    font-size: $font-size-base;
+    font-size: $font-size-header;
     display: flex;
     flex-direction: row;
     justify-content: center;
