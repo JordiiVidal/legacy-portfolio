@@ -1,5 +1,5 @@
 $padding-size-header: 8px;
-$font-size-header: 15px;
+$font-size-header: 16px;
 $height-header: 70px;
 
 header {
@@ -16,6 +16,7 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  transition: box-shadow 0.3s ease;
 
   &.scroll {
     box-shadow: 0 1px 0 rgb(168 168 168 / 20%);

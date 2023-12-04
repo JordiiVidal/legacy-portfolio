@@ -1,5 +1,5 @@
-import darkIcon from '../../assets/icons/dark.svg'
-import lightIcon from '../../assets/icons/light.svg'
+import darkIcon from '/dark.svg'
+import lightIcon from '/light.svg'
 
 const DATA_THEME_ATTRIBUTE = 'data-bs-theme';
 const rootElement = document.documentElement;
