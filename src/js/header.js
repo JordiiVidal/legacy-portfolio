@@ -14,3 +14,15 @@ export function headerStyle(){
 
     window.addEventListener('scroll', scrollHandle);
 }
+
+export function navigationHeader(){
+    const buttons = header.querySelectorAll('div.step');
+    console.log(buttons);
+
+    const scrollSectionHandle = (div) => {
+        const section = div.getAttribute('data-section') ?? 'home';
+        document.getElementById(section).scrollIntoView();
+    }
+
+    [...buttons].map(div => div.addEventListener('click', () => scrollSectionHandle(div)));
+}

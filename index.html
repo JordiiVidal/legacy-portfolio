@@ -21,19 +21,19 @@
       </div>
 
       <div id="steps" grid-area="steps">
-        <div class="step button" id="home">
+        <div class="step" data-section="home">
           <label>Home</label>
         </div>
 
-        <div class="step button" id="about-me">
+        <div class="step" data-section="about">
           <label>About</label>
         </div>
 
-        <div class="step button" id="projects">
+        <div class="step" data-section="projects">
           <label>Projects</label>
         </div>
 
-        <div class="step button" id="contact">
+        <div class="step" data-section="contact">
           <label>Contact</label>
         </div>
       </div>
@@ -47,25 +47,25 @@
   </header>
 
   <main class="container">
-    <section>
+    <section id="home">
       <div class="section-header">
         <span class="text-primary">Jordi Vidal Roselló</span>
         <h1>Full Stack Developer</h1>
         <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt impedit, culpa quaerat vero sit est
-          distinctio velit alias numquam commodi suscipit, quidem explicabo illum sequi reprehenderit. Porro veritatis
-          aliquam quod!
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, delectus, doloremque explicabo esse
+          ratione mollitia reiciendis fugiat ut optio dicta consectetur maiores cupiditate eaque sapiente impedit modi.
+          Provident, quos assumenda?
         </p>
       </div>
-      <div class="gap-3 d-flex justify-content-center">
+      <div class="gap-3 d-flex justify-content-center mt-5">
         <button type="button" class="btn btn-primary px-4">Resume</button>
         <button type="button" class="btn btn-outline-secondary px-4">Contact Me</button>
       </div>
     </section>
-    <section id="section-about">
+    <section id="about">
       <div class="section-header">
         <span class="text-warning">About me</span>
-        <h1>Full Stack Developer</h1>
+        <h1>Building My Story</h1>
         <p>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt impedit, culpa quaerat vero sit est
           distinctio velit alias numquam commodi suscipit, quidem explicabo illum sequi reprehenderit. Porro veritatis
@@ -103,6 +103,8 @@
         </div>
       </div>
     </section>
+    <section id="projects"></section>
+    <section id="contact"></section>
   </main>
 
   <footer>
