@@ -15,32 +15,34 @@
 <body>
 
   <header>
-    <nav class="container">
-      <div id="logo" grid-area="logo">
-        <img src="/vite.svg">
+    <nav class="container" role="navigation" aria-label="Header navigation">
+      <div id="logo" role="presentation">
+        <a href="/" aria-label="Home">
+          <img src="/vite.svg" alt="Logo for Portfolio">
+        </a>
       </div>
 
-      <div id="steps" grid-area="steps">
-        <div class="step" data-section="home">
-          <label>Home</label>
-        </div>
+      <ul id="steps" role="list">
+        <li class="step" data-section="home" role="listitem">
+          <a href="#home" class="text-reset">Home</a>
+        </li>
 
-        <div class="step" data-section="about">
-          <label>About</label>
-        </div>
+        <li class="step" data-section="about" role="listitem">
+          <a href="#about" class="text-reset">About</a>
+        </li>
 
-        <div class="step" data-section="projects">
-          <label>Projects</label>
-        </div>
+        <li class="step" data-section="projects" role="listitem">
+          <a href="#projects" class="text-reset">Projects</a>
+        </li>
 
-        <div class="step" data-section="contact">
-          <label>Contact</label>
-        </div>
-      </div>
+        <li class="step" data-section="contact" role="listitem">
+          <a href="#contact" class="text-reset">Contact</a>
+        </li>
+      </ul>
 
-      <div id="settings" grid-area="settings">
-        <button class="button" id="theme">
-          <img id="icon-theme" src="light.svg">
+      <div id="settings" role="toolbar">
+        <button type="button" id="theme" aria-label="Toggle theme">
+          <img id="icon-theme" src="light.svg" alt="Theme icon" aria-hidden="false">
         </button>
       </div>
     </nav>
@@ -59,18 +61,19 @@
       </div>
       <div class="gap-3 d-flex justify-content-center mt-5">
         <a href="https://www.linkedin.com/in/jordi-vidal-rosello/" target="_blank"
-          class="btn btn-outline-secondary px-4" aria-label="Visit my Linkedin profile" rel="noopener noreferrer">
-          <i class="bi bi-linkedin" role="img"></i>
+          class="btn btn-outline-secondary px-4" aria-label="Visit my Linkedin profile" aria-hidden="true" role="img"
+          rel="noopener noreferrer">
+          <i class="bi bi-linkedin"></i>
           <span>Linkedin</span>
         </a>
         <a href="https://github.com/JordiiVidal" target="_blank" class="btn btn-outline-secondary px-4"
-          aria-label="Visit my Github profile" rel="noopener noreferrer">
-          <i class="bi bi-github" role="img"></i>
+          aria-label="Visit my Github profile" aria-hidden="true" role="img" rel="noopener noreferrer">
+          <i class="bi bi-github"></i>
           <span>Github</span>
         </a>
         <a href="mailto:jordividal1997@gmail.com" target="_blank" class="btn btn-outline-secondary px-4"
-          aria-label="Send email to jordividal1997@gmail.com" rel="noopener noreferrer">
-          <i class="bi bi-envelope-fill" role="img"></i>
+          aria-label="Send email to jordividal1997@gmail.com" aria-hidden="true" role="img" rel="noopener noreferrer">
+          <i class="bi bi-envelope-fill"></i>
           <span>Mail</span>
         </a>
       </div>
