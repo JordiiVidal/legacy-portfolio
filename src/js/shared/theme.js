@@ -28,27 +28,30 @@ export function switchThemeButton(){
     buttonElement.addEventListener('click', themeSwitchHandle);
 }
 
-function animationThemeSwitch(callback){
-    const keyframes = {
-        start : [
-            { transform: "rotate(0) scale(1)" },
-            { transform: "rotate(180deg) scale(0.8)" },
-        ],
-        end : [
-            { transform: "rotate(-180deg) scale(0.8)" },
-            { transform: "rotate(0) scale(1)" },
-        ]
-    };
-      
+function animationThemeSwitch(callback) {
+    const startKeyframes = [
+      { transform: 'rotate(0) scale(1)', opacity: 1 },
+      { transform: 'rotate(90deg) scale(0.8)', opacity: 0.82 },
+    ];
+  
+    const endKeyframes = [
+      { transform: 'rotate(-90deg) scale(0.8)', opacity: 0.82 },
+      { transform: 'rotate(0) scale(1)', opacity: 1 },
+    ];
+  
     const options = {
-        duration: 450,
-        iterations: 1,
+      duration: 350,
+      iterations: 1,
+      easing: 'ease-in-out',
     };
-
-    const animation = buttonElement.animate(keyframes.start, options);
-    animation.finished.then(() => {
+  
+    const startAnimation = buttonElement.animate(startKeyframes, options);
+    startAnimation.finished.then(() => {
+      if (callback) {
         callback();
-        buttonElement.animate(keyframes.end, options);
+      }
+  
+      const endAnimation = buttonElement.animate(endKeyframes, options);
     });
 }
 
