@@ -20,9 +20,36 @@ export function switchThemeButton(){
         return;
     }
     
-    const themeSwitchHandle = () => setGlobalTheme(getNextTheme());
+    const themeSwitchHandle = () => {
+        const callback = () => setGlobalTheme(getNextTheme());
+        animationThemeSwitch(callback)
+    }
     
     buttonElement.addEventListener('click', themeSwitchHandle);
+}
+
+function animationThemeSwitch(callback){
+    const keyframes = {
+        start : [
+            { transform: "rotate(0) scale(1)" },
+            { transform: "rotate(180deg) scale(0.8)" },
+        ],
+        end : [
+            { transform: "rotate(-180deg) scale(0.8)" },
+            { transform: "rotate(0) scale(1)" },
+        ]
+    };
+      
+    const options = {
+        duration: 450,
+        iterations: 1,
+    };
+
+    const animation = buttonElement.animate(keyframes.start, options);
+    animation.finished.then(() => {
+        callback();
+        buttonElement.animate(keyframes.end, options);
+    });
 }
 
 function setGlobalTheme(theme){
