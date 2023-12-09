@@ -10,6 +10,7 @@
 
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <link rel="stylesheet" type="text/css" href="./src/styles/styles.scss" />
+  <script defer type="text/javascript" src="./src/js/shared/scroll.js"></script>
 </head>
 
 <body>
@@ -49,7 +50,7 @@
   </header>
 
   <main class="container">
-    <section id="home">
+    <section class="hidden" id="home">
       <div class="section-header">
         <span class="text-primary">Jordi Vidal Roselló</span>
         <h1>Full Stack Developer</h1>
@@ -78,7 +79,7 @@
         </a>
       </div>
     </section>
-    <section id="about">
+    <section class="hidden" id="about">
       <div class="section-header">
         <span class="text-warning">About me</span>
         <h1>Building My Story</h1>
@@ -89,28 +90,28 @@
         </p>
       </div>
       <div id="grid-about" class="grid">
-        <div class="card frontend">
+        <div class="card hidden frontend">
           <div class="img-container">
             <img src="code.svg" width="120" height="120">
           </div>
           <h3>Front-End</h3>
           <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit eum tempora reprehenderit ipsum.</p>
         </div>
-        <div class="card">
+        <div class="card hidden">
           <div class="img-container">
             <img src="angular.png" width="120" height="120">
           </div>
           <h3>Angular</h3>
           <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit eum tempora reprehenderit ipsum.</p>
         </div>
-        <div class="card">
+        <div class="card hidden">
           <div class="img-container">
             <img src="laravel.svg" width="120" height="120">
           </div>
           <h3>Laravel</h3>
           <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit eum tempora reprehenderit ipsum.</p>
         </div>
-        <div class="card backend">
+        <div class="card hidden backend">
           <div class="img-container">
             <img src="layers.svg" width="120" height="120">
           </div>
