@@ -1,17 +1,11 @@
-.hidden {
+.scroll-animation-hidden {
     opacity: 0;
     filter: blur(10px);
     transform: translateX(-100%);
-    transition: all 1s ease-in-out;
+    transition: all 1.5s ease-in-out;
 }
 
-@media (prefers-reduced-motin) {
-    .hidden {
-        transition: none;
-    }
-}
-
-.show {
+.scroll-animation-show {
     opacity: 1;
     filter: blur(0);
     transform: translateX(0);
