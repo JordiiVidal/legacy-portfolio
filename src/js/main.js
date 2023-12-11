@@ -1,10 +1,13 @@
 import '../styles/styles.scss'
 import '../../node_modules/bootstrap-icons/font/bootstrap-icons.scss'
 
-import { switchThemeButton, initializeTheme } from './shared/theme';
-import { headerStyle, navigationHeader } from './shared/header';
+import { switchThemeButton, initializeTheme } from './layout/theme';
+import { headerStyle, navigationHeader } from './layout/header';
+import { scrollAnimations } from './layout/scroll';
 
-function setupSettings() {
+function setupLayout() {
+    scrollAnimations();
+
     //Theme
     initializeTheme();
     switchThemeButton();
@@ -14,8 +17,7 @@ function setupSettings() {
     navigationHeader();
 }
 
-
 ( function run(){
     'use strict'
-    setupSettings();
+    setupLayout();
 })();
