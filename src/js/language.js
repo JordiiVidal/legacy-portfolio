@@ -15,9 +15,6 @@ i18next
         }
     }, function(err, t) {
         setupLanguage();
-    })
-    .on('languageChanged', () => {
-        setupLanguage();
     });
 
 function setupLanguage(){
