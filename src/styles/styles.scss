@@ -1,4 +1,4 @@
-@import "bootstrap/scss/bootstrap";
+@import "./custom-boostrap.scss";
 @import "./header.scss";
 @import "./animations.scss";
 
@@ -21,6 +21,10 @@ section {
     place-items: center;
     align-content: center;
     min-height: 100vh;
+
+    &:first-child {
+        min-height: calc(100vh - #{$height-header});
+    }
 
     .section-header {
         text-align: center;
@@ -51,7 +55,7 @@ section {
 
 .grid {
     display: grid;
-    gap: 20px;
+    gap: 30px;
 
     &#grid-about {
         grid-template-columns: repeat(2, 1fr);
@@ -62,7 +66,7 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: end;
-    height: 400px;
+    height: 420px;
     border-radius: 30px;
     text-align: center;
     padding: 25px 30px;

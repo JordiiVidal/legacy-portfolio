@@ -2,7 +2,7 @@ const header = document.querySelector('header');
 
 export function headerStyle(){
 
-    const scrollHandle = (e) => {
+    const scrollHandle = () => {
         const scrollPosition = window.scrollY;
         if(scrollPosition > 0){
             header.classList.add('scroll');
@@ -12,6 +12,7 @@ export function headerStyle(){
         header.classList.remove('scroll');
     }
 
+    scrollHandle();
     window.addEventListener('scroll', scrollHandle);
 }
 
