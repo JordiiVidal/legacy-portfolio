@@ -1,26 +1,35 @@
-import jsonCat from '../lang/cat.json';
-import jsonEs from '../lang/es.json';
-import jsonEn from '../lang/en.json';
-
 import i18next from 'i18next';
 
-i18next
-    .init({
-        lng: 'en',
+const defaultLanguage = 'en';
+const supportedLanguages = ['en','es','cat'];
+
+async function initLanguage(){
+   
+    const initLanguage = getCurrentLanguage();
+
+    await i18next.init({
+        fallbackLng: defaultLanguage,
+        supportedLngs: supportedLanguages,
+        lng: initLanguage,
         debug: true,
-        resources: {
-            en : jsonEn,
-            es : jsonEs,
-            cat : jsonCat,
-        }
-    }, function(err, t) {
-        setupLanguage();
     });
 
-function setupLanguage(){
-    document.getElementById('language-indicator').innerText = i18next.language;
+    await addResource(initLanguage);
+
 }
 
-export function changeLanguage(lang){
-    i18next.changeLanguage(lang);
+function getCurrentLanguage(){
+    const navigatorLanguage = navigator.language ?? defaultLanguage;
+    return supportedLanguages.find(language => navigatorLanguage.includes(language)) ?? defaultLanguage;
 }
+
+async function addResource(language, namespace = 'translation') {
+    if(!i18next.hasResourceBundle(language, namespace)){
+        const translation = await fetch(`/locales/${language}/translation.json`);
+        i18next.addResourceBundle(language, namespace, await translation.json());
+    }
+}
+
+(async() => {
+    await initLanguage();
+})();

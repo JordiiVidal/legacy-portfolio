@@ -1,0 +1,8 @@
+{
+  "header" : {
+      "home": "Inicio",
+      "about": "Acerca de",
+      "skills": "Habilidades",
+      "contact": "Contacto"
+  }
+}
