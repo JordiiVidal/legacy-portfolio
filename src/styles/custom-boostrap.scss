@@ -1,9 +1,61 @@
 $container-max-widths: (
     sm: 540px,
-    md: 720px,
-    lg: 850px,
+    md: 650px,
+    lg: 700px,
     xl: 1140px,
     xxl: 1320px
 );
 
 @import "bootstrap/scss/bootstrap";
+
+@import "variables";
+
+:is(.btn) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    font-weight: normal;
+    border-radius: 0.243rem;
+    width: 150px;
+}
+
+.btn-linkedin {
+    $linkedin-bg: #0a66c2;
+    --bs-btn-color: var(--bs-white);
+    --bs-btn-bg: var(--bd-linkedin-bg);
+    --bs-btn-border-color: var(--bd-linkedin-bg);
+    --bs-btn-hover-color: var(--bs-white);
+    --bs-btn-hover-bg: #{shade-color($linkedin-bg, 10%)};
+    --bs-btn-hover-border-color: #{shade-color($linkedin-bg, 10%)};
+    --bs-btn-active-color: var(--bs-btn-hover-color);
+    --bs-btn-active-bg: #{shade-color($linkedin-bg, 10%)};
+    --bs-btn-active-border-color: #{shade-color($linkedin-bg, 10%)};
+}
+
+.btn-github {
+    $github-bg: #010409;
+    --bs-btn-color: var(--bs-white);
+    --bs-btn-bg: var(--bd-github-bg);
+    --bs-btn-border-color: var(--bd-github-bg);
+    --bs-btn-hover-color: var(--bs-white);
+    --bs-btn-hover-bg: #{shade-color($github-bg, 10%)};
+    --bs-btn-hover-border-color: #{shade-color($github-bg, 10%)};
+    --bs-btn-active-color: var(--bs-btn-hover-color);
+    --bs-btn-active-bg: #{shade-color($github-bg, 10%)};
+    --bs-btn-active-border-color: #{shade-color($github-bg, 10%)};
+}
+
+.btn-mail {
+    $github-bg: #010409;
+    --bs-btn-color: var(--bs-white);
+    --bs-btn-bg: var(--bd-github-bg);
+    --bs-btn-border-color: var(--bd-github-bg);
+    --bs-btn-hover-color: var(--bs-white);
+    --bs-btn-hover-bg: #{shade-color($github-bg, 10%)};
+    --bs-btn-hover-border-color: #{shade-color($github-bg, 10%)};
+    --bs-btn-active-color: var(--bs-btn-hover-color);
+    --bs-btn-active-bg: #{shade-color($github-bg, 10%)};
+    --bs-btn-active-border-color: #{shade-color($github-bg, 10%)};
+}
