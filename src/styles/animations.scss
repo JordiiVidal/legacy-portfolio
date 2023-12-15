@@ -1,3 +1,5 @@
+/** Basic Scrolling */
+
 .scroll-animation-hidden {
     opacity: 0;
     filter: blur(10px);
@@ -21,6 +23,8 @@
         }
     }
 }
+
+/** Higlighter */
 
 $mark-duration: 1s;
 $mark-delay: 0.5s;
@@ -47,5 +51,36 @@ $mark-delay: 0.5s;
 @keyframes highlight {
     to {
         background-position: 0 0;
+    }
+}
+
+/** Hover Line */
+
+$hover-line-animation-duration: 0.54s;
+$hover-color: #a3a3a3;
+
+.hover-line {
+    position: relative;
+
+    &:hover {
+        color: $hover-color;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        background-color: $hover-color;
+        bottom: -2px;
+        left: 0;
+        transform: scaleX(0);
+        transform-origin: bottom left;
+        transition: transform $hover-line-animation-duration ease-in-out;
+    }
+
+    &:hover::after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
     }
 }
