@@ -1,12 +1,9 @@
 import '../styles/styles.scss'
 
-import { switchThemeButton, initializeTheme } from './layout/theme';
-import { headerStyle, navigationHeader } from './layout/header';
-import { scrollAnimations } from './layout/scroll';
+import { switchThemeButton, initializeTheme } from './theme';
+import { headerStyle, navigationHeader } from './header';
 
-function setupLayout() {
-    scrollAnimations();
-
+function setup() {
     //Theme
     initializeTheme();
     switchThemeButton();
@@ -18,5 +15,5 @@ function setupLayout() {
 
 ( function run(){
     'use strict'
-    setupLayout();
+    setup();
 })();

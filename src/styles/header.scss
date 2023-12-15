@@ -1,6 +1,4 @@
-$padding-size-header: 8px;
-$font-size-header: 16px;
-$height-header: 70px;
+@import "variables";
 
 header {
   padding: 0 $padding-size-header;
@@ -25,15 +23,14 @@ header {
 
 nav {
   display: grid;
-  grid-template-areas: "logo steps settings";
-  padding: 0 $padding-size-header;
+  grid-template-areas: "logo steps";
 }
 
 #logo {
   grid-area: logo;
   justify-self: start;
   align-self: center;
-  padding: $padding-size-header;
+  padding-block: $padding-size-header;
 
   span {
     font-size: 20px;
@@ -43,7 +40,7 @@ nav {
 
 #steps {
   grid-area: steps;
-  justify-self: center;
+  justify-self: right;
   align-self: center;
   padding: $padding-size-header;
   margin: 0;
@@ -58,7 +55,7 @@ nav {
     font-size: 0.92rem;
 
     a {
-      margin-inline: 1.05rem;
+      margin-inline: 0.5rem;
       text-decoration: none;
       color: var(--bs-emphasis-color);
 

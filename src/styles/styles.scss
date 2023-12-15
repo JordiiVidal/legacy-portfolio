@@ -1,9 +1,7 @@
 @import "./custom-boostrap.scss";
 @import "./header.scss";
 @import "./animations.scss";
-
-$letter-spacing-titles: 0.4px;
-$margin-vertically-titles: 20px;
+@import "variables";
 
 html {
     box-sizing: border-box;
@@ -18,9 +16,8 @@ body {
 
 section {
     display: grid;
-    place-items: center;
+    place-items: start;
     align-content: center;
-    min-height: 100vh;
 
     &:first-child {
         min-height: calc(100vh - #{$height-header});
@@ -28,6 +25,10 @@ section {
 
     .section-header {
         text-align: center;
+
+        &:first-child {
+            text-align: left;
+        }
 
         span {
             display: block;
@@ -47,8 +48,9 @@ section {
         p {
             margin-top: $margin-vertically-titles;
             font-weight: 300;
-            font-size: 20px;
+            font-size: 18px;
             letter-spacing: 0.3px;
+            line-height: 34px;
         }
     }
 }
