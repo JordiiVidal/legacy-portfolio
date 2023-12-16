@@ -17,13 +17,17 @@ export function headerStyle(){
 }
 
 export function navigationHeader(){
-    const buttons = header.querySelectorAll('div.step');
-    console.log(buttons);
+    const linkItemsList = header.querySelectorAll('#header-list li a');
 
-    const scrollSectionHandle = (div) => {
-        const section = div.getAttribute('data-section') ?? 'home';
-        document.getElementById(section).scrollIntoView();
+    function scrollSectionHandle(){
+        const section = this.dataset.section ?? 'home';
+        if(section == 'home'){
+            document.documentElement.scrollTop = 0;
+            return;
+        }
+
+        document.getElementById(section)?.scrollIntoView();
     }
 
-    [...buttons].map(div => div.addEventListener('click', () => scrollSectionHandle(div)));
+    [...linkItemsList].map(linkElement => linkElement.addEventListener('click', scrollSectionHandle));
 }

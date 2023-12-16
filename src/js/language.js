@@ -25,7 +25,7 @@ function getCurrentLanguage(){
 
 async function addResource(language, namespace = 'translation') {
     if(!i18next.hasResourceBundle(language, namespace)){
-        const translation = await fetch(`/locales/${language}/translation.json`);
+        const translation = await fetch(`locales/${language}/translation.json`);
         i18next.addResourceBundle(language, namespace, await translation.json());
     }
 }

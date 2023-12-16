@@ -38,7 +38,7 @@ nav {
   }
 }
 
-#steps {
+#header-list {
   grid-area: steps;
   justify-self: right;
   align-self: center;
@@ -47,7 +47,7 @@ nav {
   list-style: none;
   cursor: default;
 
-  .step {
+  li {
     display: inline-block;
     margin: 0 $padding-size-header;
     font-size: $font-size-header;
@@ -58,6 +58,7 @@ nav {
       margin-inline: 0.5rem;
       text-decoration: none;
       color: var(--bs-emphasis-color);
+      cursor: pointer;
 
       &:hover {
         color: var(--bs-secondary-text-emphasis);
