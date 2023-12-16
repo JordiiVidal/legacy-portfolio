@@ -2,6 +2,8 @@
 
 Welcome to my portfolio! This is a simple, vanilla JavaScript, and Bootstrap-based portfolio.
 
+Live demo [here](https://jordiividal.github.io/my-portfolio/).
+
 ## Table of Contents
 
 - [Introduction](#introduction)
