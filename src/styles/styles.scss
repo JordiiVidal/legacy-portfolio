@@ -14,43 +14,85 @@ body {
     min-height: 100%;
 }
 
-section {
-    display: grid;
-    place-items: start;
-    align-content: center;
-
-    &:first-child {
-        min-height: calc(100vh - #{$height-header});
-    }
-
-    .section-header {
-        text-align: center;
+main {
+    section {
+        display: grid;
+        place-items: start;
+        align-content: center;
 
         &:first-child {
-            text-align: left;
+            min-height: calc(100vh - #{$height-header});
         }
 
-        span {
-            display: block;
-            font-weight: 700;
-            font-size: 16px;
-            letter-spacing: $letter-spacing-titles;
-            text-transform: uppercase;
-            margin-bottom: $margin-vertically-titles;
+        .section-header {
+            text-align: center;
+
+            &:first-child {
+                text-align: left;
+            }
+
+            span {
+                display: block;
+                font-weight: 700;
+                font-size: 16px;
+                letter-spacing: $letter-spacing-titles;
+                text-transform: uppercase;
+                margin-bottom: $margin-vertically-titles;
+            }
+
+            h1 {
+                font-weight: 700;
+                font-size: 60px;
+                letter-spacing: $letter-spacing-titles;
+            }
+
+            p {
+                margin-top: $margin-vertically-titles;
+                font-weight: 300;
+                font-size: 18px;
+                letter-spacing: 0.3px;
+                line-height: 34px;
+            }
+        }
+    }
+}
+
+footer {
+    background-color: rgba(var(--bs-tertiary-bg-rgb), 1) !important;
+
+    h3 {
+        font-weight: 700;
+    }
+
+    section {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 20px;
+
+        .links {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
         }
 
-        h1 {
-            font-weight: 700;
-            font-size: 60px;
-            letter-spacing: $letter-spacing-titles;
-        }
+        ul {
+            list-style: none;
 
-        p {
-            margin-top: $margin-vertically-titles;
-            font-weight: 300;
-            font-size: 18px;
-            letter-spacing: 0.3px;
-            line-height: 34px;
+            li {
+                display: flex;
+                flex-direction: column;
+                padding-bottom: 5px;
+
+                small {
+                    font-weight: 700;
+                    font-size: 9px;
+                    text-transform: uppercase;
+                }
+
+                span {
+                    font-size: 12px;
+                }
+            }
         }
     }
 }

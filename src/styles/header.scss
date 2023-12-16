@@ -19,11 +19,11 @@ header {
   &.scroll {
     box-shadow: 0 1px 0 rgb(168 168 168 / 20%);
   }
-}
 
-nav {
-  display: grid;
-  grid-template-areas: "logo steps";
+  nav {
+    display: grid;
+    grid-template-areas: "logo steps";
+  }
 }
 
 #logo {

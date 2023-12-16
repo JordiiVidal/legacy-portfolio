@@ -5,12 +5,20 @@
 :is(.btn) {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     align-items: center;
     padding: 0.5rem 1rem;
     font-weight: normal;
     border-radius: 0.243rem;
-    width: 150px;
+
+    &[data-button="text-icon"] {
+        width: 150px;
+        justify-content: space-between;
+    }
+
+    &[data-button="icon"] {
+        width: 50px;
+        justify-content: center;
+    }
 }
 
 .btn-linkedin {
@@ -39,15 +47,15 @@
     --bs-btn-active-border-color: #{shade-color($github-bg, 10%)};
 }
 
-.btn-mail {
-    $github-bg: #010409;
+.btn-footer {
+    $footer-bg: #ebebeb;
     --bs-btn-color: var(--bs-white);
-    --bs-btn-bg: var(--bd-github-bg);
-    --bs-btn-border-color: var(--bd-github-bg);
+    --bs-btn-bg: var(--bd-footer-bg);
+    --bs-btn-border-color: var(--bd-footer-bg);
     --bs-btn-hover-color: var(--bs-white);
-    --bs-btn-hover-bg: #{shade-color($github-bg, 10%)};
-    --bs-btn-hover-border-color: #{shade-color($github-bg, 10%)};
+    --bs-btn-hover-bg: #{shade-color($footer-bg, 5%)};
+    --bs-btn-hover-border-color: #{shade-color($footer-bg, 5%)};
     --bs-btn-active-color: var(--bs-btn-hover-color);
-    --bs-btn-active-bg: #{shade-color($github-bg, 10%)};
-    --bs-btn-active-border-color: #{shade-color($github-bg, 10%)};
+    --bs-btn-active-bg: #{shade-color($footer-bg, 5%)};
+    --bs-btn-active-border-color: #{shade-color($footer-bg, 5%)};
 }
