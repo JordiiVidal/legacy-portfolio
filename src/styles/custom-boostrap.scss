@@ -47,6 +47,19 @@
     --bs-btn-active-border-color: #{shade-color($github-bg, 10%)};
 }
 
+.btn-resume {
+    $resume-bg: #dc3545;
+    --bs-btn-color: var(--bs-white);
+    --bs-btn-bg: var(--bd-resume-bg);
+    --bs-btn-border-color: var(--bd-resume-bg);
+    --bs-btn-hover-color: var(--bs-white);
+    --bs-btn-hover-bg: #{shade-color($resume-bg, 10%)};
+    --bs-btn-hover-border-color: #{shade-color($resume-bg, 10%)};
+    --bs-btn-active-color: var(--bs-btn-hover-color);
+    --bs-btn-active-bg: #{shade-color($resume-bg, 10%)};
+    --bs-btn-active-border-color: #{shade-color($resume-bg, 10%)};
+}
+
 .btn-footer {
     $footer-bg: #ebebeb;
     --bs-btn-color: var(--bs-white);
